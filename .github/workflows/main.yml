@@ -31,7 +31,7 @@ jobs:
       
       #execute gradle command for running cucumber test
     - name: execute test
-      run: ./gradlew webTest
+      run: ./gradlew apiTest
 
       #Archive test result
     - name: Archive test result
