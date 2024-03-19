@@ -59,4 +59,8 @@ public class webStepDef {
     public void userRemoveItemToCart() {
         webPage.removeToCart();
     }
+
+    @Then("user enters the password, the password is hidden \\(not visible)")
+    public void userEntersThePasswordThePasswordIsHiddenNotVisible() {
+    }
 }

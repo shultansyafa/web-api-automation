@@ -54,3 +54,17 @@ Feature: Test Automation Web
     Then verify cart item is match "2"
 
 
+  @web
+  Scenario: user login without filling in the registered username and password
+    Given open web login page
+    When user click login button
+    Then user will see error message "Epic sadface: Username is required"
+
+  @web
+  Scenario: verify that the entered password does not contain visible letters/numbers
+    Given open web login page
+    And user input username "standard_user"
+    And user input password "secret_sauce"
+    Then user enters the password, the password is hidden (not visible)
+
+
