@@ -43,12 +43,11 @@ jobs:
         path: reports
 
       #Deploy to github pages
-    - name: Deploy report to github pages
-      if: always()
+    - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_DIR: ./public
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
           
             
      
